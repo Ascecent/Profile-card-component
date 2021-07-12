@@ -24,11 +24,11 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 Mobile Resolution
 
-![](images/screenshots/"Mobile resolution.png")
+![](images/screenshots/mobile-screenshot.png)
 
 Desktop Resolution
 
-![](images/screenshots/"Desktop resolution.png")
+![](images/screenshots/desktop-screenshot.png)
 ### Links
 
 - [FrontEnd Mentor Solution](https://your-solution-url.com)
