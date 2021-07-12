@@ -5,23 +5,147 @@
 /* Imported from Google Fonts */
 
 /* Kumbh Sans */
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 /*===============
 === VARIABLES ===
 ===============*/
 
 * {
-    /* Primary colors */
-    --dark_cyan: hsl(185, 75%, 39%);
-    --darl_blue: hsl(229, 23%, 23%);
-    --grayish_blue: hsl(227, 10%, 46%);
+  /* Primary colors */
+  --dark_cyan: hsl(185, 75%, 39%);
+  --dark_blue: hsl(229, 23%, 23%);
+  --grayish_blue: hsl(227, 10%, 46%);
 
-    /* Neutral colors */
-    --dark_gray: hsl(0, 0%, 59%);
-    --white: hsl(0, 0%, 100%);
+  /* Neutral colors */
+  --dark_gray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 100%);
 
-    /* Fonts */
-    --kumbh: 'Kumbh Sans', sans-serif;
+  /* Fonts */
+  --kumbh: "Kumbh Sans", sans-serif;
 }
 
+/*=================
+=== BODY STYLES ===
+=================*/
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--kumbh);
+  background: url(../images/bg-pattern-top.svg) -20vw -75vh no-repeat,
+    url(../images/bg-pattern-bottom.svg) 50vw 45vh no-repeat;
+  background-color: var(--dark_cyan);
+}
+
+/*=========================
+=== MAIN SECTION STLYES ===
+=========================*/
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card styles */
+
+.flex-container {
+  min-width: 20rem;
+}
+
+.flex-container__div--media {
+  border-radius: 1rem 1rem 0 0;
+  background-image: url(../images/bg-pattern-card.svg);
+  width: 100%;
+  height: 9rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.div--media__div--photo {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: calc(-5rem / 2);
+  outline: 0.3rem solid var(--white);
+  background-image: url(../images/image-victor.jpg);
+}
+
+.flex-container__div--content {
+  background-color: var(--white);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.div--content__p--name {
+  color: var(--dark_blue);
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.p--name__span--age {
+  font-weight: 400;
+  color: var(--dark_gray);
+}
+
+.div--content__p--city {
+  color: var(--grayish_blue);
+}
+
+.div--content__div--stats {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 0.1rem solid var(--dark_gray);
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  line-height: 1.5;
+}
+
+.div--stat--item__p--title {
+  font-size: 1rem;
+  color: var(--dark_blue);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.div--stat--item__p--description {
+  font-size: 0.7rem;
+  color: var(--grayish_blue);
+  letter-spacing: 0.1rem;
+}
+
+/*===========================
+=== FOOTER SECTION STYLES ===
+===========================*/
+
+footer {
+  width: 100vw;
+  text-align: center;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/*==============================
+=== MEDIA QUERIES FOR MOBILE ===
+==============================*/
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-position: -200vw -90vh, 35vw 40vh;
+  }
+}
